@@ -1,10 +1,10 @@
-name: 'Hello World'
+name: 'Yaml File'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  path:  # id of input
+    description: 'Path'
     required: true
-    default: 'World'
+    default: 'None'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
