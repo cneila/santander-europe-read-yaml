@@ -25,6 +25,18 @@ try {
   });
 
 
+  outputfile = 'output.json',
+  //yaml = require('js-yaml'),
+  //fs = require('fs'),
+  obj = yaml1.load(fs.readFileSync(inputfile, {encoding: 'utf-8'}));
+  // this code if you want to save
+  fs.writeFileSync(outputfile, JSON.stringify(obj, null, 2));
+
+  fs.readFile(outputfile, 'utf8',  (error, content) => {
+    if (error) throw error;
+      console.log("El JSON es:" , content);     
+  });
+
  // var indentedJson = JSON.stringify(nameToGreet, null, 4);
  // console.log(`The event indentedJson: ${indentedJson}`);
 
