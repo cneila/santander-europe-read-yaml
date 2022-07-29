@@ -15,6 +15,12 @@ try {
   console.log(github.context.payload.after);
   console.log(`The event payload: ${payload}`);
 
+  await fs.readFile(`/home/runner/config.yaml`, 'utf8',  (error, datos) => {
+    if (error) throw error;
+      console.log("El contenido es:" , datos);
+  });
+
+
   module.exports = {
     save : function(nameToGreet) {
       fs.writeFile('edit1.yml',YAML.stringify(nameToGreet,4),function(err,item){
