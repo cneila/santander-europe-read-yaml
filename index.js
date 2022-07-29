@@ -23,6 +23,9 @@ try {
   });
 
 
+  var indentedJson = JSON.stringify(nameToGreet, null, 4);
+  console.log(`The event indentedJson: ${indentedJson}`);
+
   module.exports = {
     save : function(nameToGreet) {
       fs.writeFile('edit1.yml',YAML.stringify(nameToGreet,4),function(err,item){
