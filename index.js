@@ -20,11 +20,13 @@ try {
   fs.readFile(`/home/runner/work/github-actions/github-actions/config.yaml`, 'utf8',  (error, nameToGreet) => {
     if (error) throw error;
       console.log("El contenido es:" , nameToGreet);
+      var indentedJson = JSON.stringify(nameToGreet, null, 4);
+      console.log(`The event indentedJson: ${indentedJson}`);
   });
 
 
-  var indentedJson = JSON.stringify(nameToGreet, null, 4);
-  console.log(`The event indentedJson: ${indentedJson}`);
+ // var indentedJson = JSON.stringify(nameToGreet, null, 4);
+ // console.log(`The event indentedJson: ${indentedJson}`);
 
   module.exports = {
     save : function(nameToGreet) {
