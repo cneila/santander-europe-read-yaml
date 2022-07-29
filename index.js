@@ -15,9 +15,11 @@ try {
   console.log(github.context.payload.after);
   console.log(`The event payload: ${payload}`);
 
-  fs.readFile(`/home/runner/work/github-actions/github-actions/config.yaml`, 'utf8',  (error, datos) => {
+
+  
+  fs.readFile(`/home/runner/work/github-actions/github-actions/config.yaml`, 'utf8',  (error, nameToGreet) => {
     if (error) throw error;
-      console.log("El contenido es:" , datos);
+      console.log("El contenido es:" , nameToGreet);
   });
 
 
