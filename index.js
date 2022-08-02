@@ -17,7 +17,7 @@ try {
 
 
   
-  fs.readFile(`/home/runner/work/github-actions/github-actions/config.yaml`, 'utf8',  (error, nameToGreet) => {
+  fs.readFile(`/home/runner/work/github-actions/github-actions/config.yml`, 'utf8',  (error, nameToGreet) => {
     if (error) throw error;
       console.log("El contenido es:" , nameToGreet);
       var indentedJson = JSON.stringify(nameToGreet, null, 4);
@@ -28,7 +28,7 @@ try {
   outputfile = 'output.json',
   //yaml = require('js-yaml'),
   //fs = require('fs'),
-  obj = yaml1.load(fs.readFileSync(`/home/runner/work/github-actions/github-actions/config.yaml`, {encoding: 'utf-8'}));
+  obj = yaml1.load(fs.readFileSync(`/home/runner/work/github-actions/github-actions/config.yml`, {encoding: 'utf-8'}));
   // this code if you want to save
   fs.writeFileSync(outputfile, JSON.stringify(obj, null, 2));
 
