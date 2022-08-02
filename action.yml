@@ -1,5 +1,5 @@
 name: 'Yaml File'
-description: 'Greet someone and record the time'
+description: 'This action parse YAML to JSON.'
 inputs:
   path:  # id of input
     description: 'Path'

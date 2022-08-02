@@ -32,15 +32,17 @@ try {
   // this code if you want to save
   fs.writeFileSync(outputfile, JSON.stringify(obj, null, 2));
 
+  
   fs.readFile(outputfile, 'utf8',  (error, content) => {
     if (error) throw error;
-      console.log("El JSON es:" , content);     
+      console.log("El JSON es:" , content);
+      //return  content;    
   });
 
  // var indentedJson = JSON.stringify(nameToGreet, null, 4);
  // console.log(`The event indentedJson: ${indentedJson}`);
 
-  module.exports = {
+  /*module.exports = {
     save : function(nameToGreet) {
       fs.writeFile('edit1.yml',YAML.stringify(nameToGreet,4),function(err,item){
         if(err) {
@@ -53,7 +55,7 @@ try {
       console.log(`The event indentedJson: ${indentedJson}`);
       return indentedJson;
     }
-  }; 
+  }; */
 
 
 } catch (error) {
