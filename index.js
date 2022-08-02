@@ -7,7 +7,7 @@ const YAML = require('yamljs');
 try {
   // `path` input defined in action metadata file
   const nameToGreet = core.getInput('path');
-  console.log(`Hello ${nameToGreet}!`);
+  console.log(`Path Param Received: ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
