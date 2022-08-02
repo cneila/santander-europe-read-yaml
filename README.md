@@ -1,23 +1,22 @@
-# Hello world JavaScript action
+# This action parse YAML to JSON.
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+This action parse YAML file to JSON file
 
 ## Inputs
 
-### `who-to-greet`
+### `path`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The name of the file to parse. Default `"default.yml"`.
 
 ## Outputs
 
-### `time`
-
-The time we greeted you.
+### `file.json`
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@main
+uses: actions/santander-europe-read-yaml@main
 with:
-  who-to-greet: 'Mona the Octocat'
+  # INPUT NAME: "path"
+  path: ${{ steps.getversion.outputs.file }}
 ```
