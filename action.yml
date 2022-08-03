@@ -5,7 +5,7 @@ inputs:
     description: 'Path'
     required: true
     default: 'None'
-  path:  # id of input
+  workspace:  # id of input
     description: 'Workspace'
     required: true
     default: 'None'
