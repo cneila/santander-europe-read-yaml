@@ -8,7 +8,9 @@ try {
   
   // `path` input defined in action metadata file
   const nameToGreet = core.getInput('path');
+  const workspace = core.getInput('workspace');
   console.log(`Path Param Received: ${nameToGreet}!`);
+  console.log(`Workspace Param Received: ${workspace}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
