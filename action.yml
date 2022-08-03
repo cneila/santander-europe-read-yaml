@@ -5,6 +5,10 @@ inputs:
     description: 'Path'
     required: true
     default: 'None'
+  path:  # id of input
+    description: 'Workspace'
+    required: true
+    default: 'None'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
